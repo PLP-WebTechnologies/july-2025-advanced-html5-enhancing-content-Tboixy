@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced HTML5 Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    header, main, footer {
+      margin-bottom: 30px;
+    }
+    table, th, td {
+      border: 1px solid #333;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Week 2 Assignment: Enhanced HTML5 Form</h1>
+    <p>This page demonstrates lists, tables, media, and an accessible HTML5 form with validation.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>📋 Course Topics Covered</h2>
+      <ul>
+        <li>HTML5 Semantic Elements</li>
+        <li>Tables and Lists</li>
+        <li>Forms and Validation</li>
+        <li>Multimedia Integration</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📊 Sample Student Data</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Progress</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Amina</td>
+            <td>Web Development</td>
+            <td>75%</td>
+          </tr>
+          <tr>
+            <td>James</td>
+            <td>Database Design</td>
+            <td>82%</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>🎵 Audio Sample</h2>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section>
+      <h2>📨 Registration Form</h2>
+      <form>
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label><br/>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required autocomplete="name" minlength="3"/><br/><br/>
+
+          <label for="email">Email:</label><br/>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email"/><br/><br/>
+
+          <label for="age">Age:</label><br/>
+          <input type="number" id="age" name="age" min="1" max="120" required/><br/><br/>
+
+          <label for="dob">Date of Birth:</label><br/>
+          <input type="date" id="dob" name="dob"/><br/><br/>
+
+          <label>Gender:</label><br/>
+          <input type="radio" id="male" name="gender" value="male" required/>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female"/>
+          <label for="female">Female</label><br/><br/>
+        </fieldset>
+
+        <fieldset>
+          <legend>Skills and Preferences</legend>
+
+          <label for="skills">Skills:</label><br/>
+          <input type="checkbox" id="html" name="skills" value="HTML"/>
+          <label for="html">HTML</label>
+          <input type="checkbox" id="css" name="skills" value="CSS"/>
+          <label for="css">CSS</label>
+          <input type="checkbox" id="js" name="skills" value="JavaScript"/>
+          <label for="js">JavaScript</label><br/><br/>
+
+          <label for="country">Country:</label><br/>
+          <select id="country" name="country" required>
+            <option value="">--Select--</option>
+            <option value="ng">Nigeria</option>
+            <option value="ke">Kenya</option>
+            <option value="gh">Ghana</option>
+          </select><br/><br/>
+
+          <label for="bio">Short Bio:</label><br/>
+          <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Write something about yourself..." minlength="10"></textarea><br/><br/>
+
+          <label for="referral">Referral Code (Read-only):</label><br/>
+          <input type="text" id="referral" name="referral" value="PLP2025" readonly pattern="PLP[0-9]{4}"/><br/><br/>
+        </fieldset>
+
+        <input type="submit" value="Submit"/>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PLP Web Technologies</p>
+  </footer>
+</body>
+</html>
